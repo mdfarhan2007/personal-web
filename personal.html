@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrowBiz By Shaikh Farhan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b1220;
+color:white;
+overflow-x:hidden;
+}
+
+/* BACKGROUND */
+body::before{
+content:"";
+position:fixed;
+width:800px;
+height:800px;
+background:radial-gradient(circle,#00d4ff 0%,transparent 60%);
+top:-300px;
+left:-300px;
+opacity:0.18;
+z-index:-1;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:800px;
+height:800px;
+background:radial-gradient(circle,#8b5cf6 0%,transparent 60%);
+bottom:-300px;
+right:-300px;
+opacity:0.15;
+z-index:-1;
+}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(10,12,22,0.6);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.06);
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:800;
+background:linear-gradient(90deg,#00d4ff,#8b5cf6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.logo small{
+display:block;
+font-size:11px;
+color:#aaa;
+}
+
+/* HERO */
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+padding:140px 8% 80px;
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.hero-text h1{
+font-size:54px;
+line-height:1.2;
+font-weight:800;
+}
+
+.hero-text span{
+background:linear-gradient(90deg,#00d4ff,#8b5cf6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-text p{
+margin-top:20px;
+color:#b9c2d6;
+line-height:1.8;
+font-size:16px;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 28px;
+background:linear-gradient(90deg,#00d4ff,#8b5cf6);
+color:black;
+font-weight:700;
+border-radius:12px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+/* IMAGE */
+.hero-img{
+flex:1;
+min-width:300px;
+display:flex;
+justify-content:center;
+}
+
+.hero-img img{
+width:100%;
+max-width:520px;
+border-radius:20px;
+box-shadow:0 30px 80px rgba(0,0,0,0.5);
+}
+
+/* STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:60px 8%;
+}
+
+.stat{
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+padding:30px;
+border-radius:16px;
+text-align:center;
+transition:0.3s;
+}
+
+.stat:hover{
+transform:translateY(-6px);
+}
+
+.stat h2{
+color:#00d4ff;
+font-size:38px;
+}
+
+/* SERVICES */
+.services{
+padding:90px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+font-weight:800;
+}
+
+.title span{
+background:linear-gradient(90deg,#00d4ff,#8b5cf6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.grid{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+padding:25px;
+border-radius:16px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+/* CONTACT */
+.contact{
+padding:90px 8%;
+}
+
+.box{
+max-width:650px;
+margin:auto;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+padding:35px;
+border-radius:18px;
+}
+
+input,select,textarea{
+width:100%;
+margin-top:12px;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#111827;
+color:white;
+outline:none;
+}
+
+textarea{
+height:120px;
+resize:none;
+}
+
+button{
+width:100%;
+margin-top:15px;
+padding:14px;
+background:linear-gradient(90deg,#00d4ff,#8b5cf6);
+border:none;
+border-radius:10px;
+font-weight:800;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:25px;
+color:#888;
+border-top:1px solid rgba(255,255,255,0.05);
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<div class="logo">
+GrowBiz
+<small>By Shaikh Farhan</small>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+We Build <span>Modern Websites</span><br>
+For Your Business Growth
+</h1>
+
+<p>
+We design professional websites for shops, businesses, students and startups.
+Affordable pricing, modern design and full support included.
+</p>
+
+<a href="#contact" class="btn">Get Started</a>
+
+</div>
+
+<div class="hero-img">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+</section>
+
+<!-- STATS -->
+<section class="stats">
+
+<div class="stat">
+<h2>50+</h2>
+<p>Websites Delivered</p>
+</div>
+
+<div class="stat">
+<h2>3+</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>Client Satisfaction</p>
+</div>
+
+<div class="stat">
+<h2>24/7</h2>
+<p>Support</p>
+</div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+
+<div class="title">Our <span>Services</span></div>
+
+<div class="grid">
+
+<div class="card">Business Website</div>
+<div class="card">Clothing Store Website</div>
+<div class="card">Grocery Store Website</div>
+<div class="card">Restaurant / Cafe Website</div>
+<div class="card">Salon / Gym Website</div>
+<div class="card">E-Commerce Website</div>
+<div class="card">Portfolio Website</div>
+<div class="card">Landing Page</div>
+<div class="card">Custom Website</div>
+<div class="card">Resume Design</div>
+<div class="card">Student CV</div>
+<div class="card">Wedding Bio Data</div>
+<div class="card">Website Fix / Support</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+<div class="title">Contact <span>Now</span></div>
+
+<div class="box">
+
+<form id="form">
+
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Mobile Number" required>
+
+<!-- UPDATED SERVICES DROPDOWN -->
+<select id="service" required>
+
+<option value="">Choose Service</option>
+
+<option>Business Website</option>
+<option>Clothing Store Website</option>
+<option>Grocery Store Website</option>
+<option>Restaurant / Cafe Website</option>
+<option>Salon / Gym Website</option>
+<option>E-Commerce Website</option>
+<option>Portfolio Website</option>
+<option>Landing Page Website</option>
+<option>Custom Website</option>
+<option>Resume Design</option>
+<option>Student CV</option>
+<option>Wedding Bio Data</option>
+<option>Website Fix / Support</option>
+
+</select>
+
+<textarea id="msg" placeholder="Project details"></textarea>
+
+<button type="submit">Send on WhatsApp</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 GrowBiz By Shaikh Farhan | All Rights Reserved
+</footer>
+
+<script>
+
+document.getElementById("form").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let service=document.getElementById("service").value;
+let msg=document.getElementById("msg").value;
+
+let number="9420036288"; // REPLACE WITH YOUR NUMBER
+
+let text=`Name: ${name}\nPhone: ${phone}\nService: ${service}\nMessage: ${msg}`;
+
+let url=`https://wa.me/${number}?text=${encodeURIComponent(text)}`;
+
+window.open(url,"_blank");
+
+});
+
+</script>
+
+</body>
+</html>
